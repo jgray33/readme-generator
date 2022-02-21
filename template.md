@@ -1,4 +1,4 @@
-# Title 
+# ${title} 
 
 ## Description 
 
@@ -31,4 +31,6 @@
 
 <a name="questions"></a>
 ##### Questions
+
+If you have any questions, visit my [GitHub profile](www.github.com/${github}) or email me: ${email} 
 

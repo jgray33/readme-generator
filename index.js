@@ -1,7 +1,7 @@
 let inquirer = require('inquirer');
 const fs = require("fs")
 
-const generateReadme = ({title, description, installation, usage, license, contributors, testInstructions, gitHub, email}) =>
+const generateReadme = ({title, description, installation, usage, license, contributors, testInstructions, gitHub, email, licenseBadge}) =>
 `
 # ${title} 
 
@@ -100,13 +100,10 @@ inquirer
     name:"email",
     message:"What is your email address?",
       },
-
   ])
   .then((answers) => {
-    console.log(answers)
-    let readMePageContent = generateReadme(answers)
-
-    fs.writeFile("README.md", readMePageContent, (err) => 
+         let readMePageContent = generateReadme(answers)
+    fs.writeFile("README2.md", readMePageContent, (err) => 
     err ? console.log(err): console.log("Read me generated"))
   })
   .catch((error) => {
@@ -117,11 +114,7 @@ inquirer
     }
   });
 
-
-
-  // TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
+  function renderLicenseBadge() {
     switch(answers.license) {
         case "MIT":
             licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
@@ -143,9 +136,22 @@ function renderLicenseBadge(license) {
                 }
 }
 
+// function renderLicenseLink(license) {} {
+
+// }
+
+// function renderLicenseSection(license) {
+
+// }
+
+
+  // TODO: Create a function that returns a license badge based on which license is passed in
+// If there is no license, return an empty string
+
+
 // // TODO: Create a function that returns the license link
 // // If there is no license, return an empty string
-// function renderLicenseLink(license) {}
+// 
 
 // // TODO: Create a function that returns the license section of README
 // // If there is no license, return an empty string
