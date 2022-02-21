@@ -1,9 +1,103 @@
 let inquirer = require('inquirer');
+const fs = require("fs")
+
+const generateReadme = ({title, description, installation, usage, license, contributors, testInstructions, gitHub, email}) =>
+`
+# ${title} 
+
+## Description
+${description} 
+
+### Table of contents 
+
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Contributors](#contributors)
+* [Tests](#tests)
+* [Questions](#questions)
+
+<a name="installation"></a>
+#### Installation 
+${installation}
+
+
+<a name="usage"></a>
+#### Usage 
+${usage}
+
+
+<a name="license"></a>
+#### License 
+${license}
+
+
+<a name="contributors"></a>
+#### Contributors 
+${contributors}
+
+<a name="tests"></a>
+#### Tests 
+${testInstructions}
+
+<a name="questions"></a>
+##### Questions
+
+If you have any questions, visit my [GitHub profile](www.github.com/${github}) or email me: ${email} 
+
+
+`
+
 
 
 inquirer
-  .prompt([
-    /* Pass your questions in here */
+  .prompt([ 
+      {
+    type:"input",
+    name:"title",
+    message:"What is the title of your project?",
+      },
+      {
+    type:"input",
+    name:"description",
+    message:"How would you describe your project?",
+      },
+      {
+    type:"input",
+    name:"installation",
+    message:"Describe how you would install your project?",
+      },
+      {
+    type:"input",
+    name:"usage",
+    message:"How do you use the project?",
+      },
+      {
+    type:"list",
+    name:"license",
+    message:["option1", "option2", "option3", "option4", "option5"],
+      },
+      {
+    type:"input",
+    name:"contributors",
+    message:"Who are the other contributors to this project?",
+      },
+      {
+    type:"input",
+    name:"testInstructions",
+    message:"What are the test instructions?",
+      },
+      {
+    type:"input",
+    name:"gitHub",
+    message:"What is your GitHub user name?",
+      },
+      {
+    type:"input",
+    name:"email",
+    message:"What is your email address?",
+      },
+
   ])
   .then((answers) => {
     console.log(answers)
