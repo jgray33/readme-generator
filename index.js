@@ -43,7 +43,7 @@ ${testInstructions}
 <a name="questions"></a>
 ##### Questions
 
-If you have any questions, visit my [GitHub profile](www.github.com/${github}) or email me: ${email} 
+If you have any questions, visit my [GitHub profile](www.github.com/${gitHub}) or email me: ${email} 
 
 
 `
@@ -73,9 +73,9 @@ inquirer
     message:"How do you use the project?",
       },
       {
-    type:"list",
+    type:"input",
     name:"license",
-    message:["option1", "option2", "option3", "option4", "option5"],
+    message:"what about a license?",
       },
       {
     type:"input",
@@ -101,6 +101,10 @@ inquirer
   ])
   .then((answers) => {
     console.log(answers)
+    let readMePageContent = generateReadme(answers)
+
+    fs.writeFile("README.md", readMePageContent, (err) => 
+    err ? console.log(err): console.log("Read me generated"))
   })
   .catch((error) => {
     if (error.isTtyError) {
