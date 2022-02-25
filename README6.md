@@ -1,10 +1,10 @@
 
-undefined
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-# ReadMe generator 
+# ReadME generator 
 
 ## Description
-It's a generator that generates a readme 
+A readme generator 
 
 
 
@@ -19,27 +19,27 @@ It's a generator that generates a readme
 
 <a name="installation"></a>
 #### Installation 
-run and play!
+plugin ans enjoy
 
 
 <a name="usage"></a>
 ### Usage 
-Install 
+Testkhasdf
 
 
 <a name="license"></a>
 ### License 
 
-This application is covered under the [GPLv2](undefined) license.  
+This application is covered under the [Apache](https://opensource.org/licenses/Apache-2.0) license.  
 
 
 <a name="contributors"></a>
 ### Contributors 
-Julia
+Julia gnas dhf a
 
 <a name="tests"></a>
 ### Tests 
-test
+Jest
 
 <a name="questions"></a>
 #### Questions

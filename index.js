@@ -15,7 +15,7 @@ const generateReadme = ({
   licenseLink
 }) =>
   `
-${licenseBadge}
+${renderLicenseBadge(license)}
 
 # ${title} 
 
@@ -46,7 +46,7 @@ ${usage}
 <a name="license"></a>
 ### License 
 
-This application is covered under the [${license}](${licenseLink}) license.  
+This application is covered under the [${license}](${renderLicenseLink(license)}) license.  
 
 
 <a name="contributors"></a>
@@ -120,11 +120,8 @@ inquirer. prompt([
 
      .then((answers) => {
       console.log(answers)
-      renderLicenseBadge(answers.license)
-      console.log(licenseBadge)
-      renderLicenseLink(answers.license)
       let readMePageContent = generateReadme(answers)
-      fs.writeFile("README4.md", readMePageContent, (err) =>
+      fs.writeFile("README6.md", readMePageContent, (err) =>
         err ? console.log(err) : console.log("Read me generated"))
      })
  
