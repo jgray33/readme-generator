@@ -44,5 +44,5 @@ test
 <a name="questions"></a>
 #### Questions
 
-If you have any questions, visit my [GitHub profile](www.github.com/jgray33) or email me: julia-gray33@hotmail.com 
+If you have any questions, visit my [GitHub profile](https://www.github.com/jgray33) or email me: julia-gray33@hotmail.com 
 
