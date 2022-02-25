@@ -11,9 +11,7 @@ const generateReadme = ({
   testInstructions,
   gitHub,
   email,
-  licenseBadge,
-  licenseLink
-}) =>
+  }) =>
   `
 ${renderLicenseBadge(license)}
 
@@ -22,9 +20,10 @@ ${renderLicenseBadge(license)}
 ## Description
 ${description} 
 
+- - - - 
 
 
-### Table of contents 
+## Table of contents 
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -34,31 +33,31 @@ ${description}
 * [Questions](#questions)
 
 <a name="installation"></a>
-#### Installation 
+## Installation 
 ${installation}
 
 
 <a name="usage"></a>
-### Usage 
+## Usage 
 ${usage}
 
 
 <a name="license"></a>
-### License 
+## License 
 
 This application is covered under the [${license}](${renderLicenseLink(license)}) license.  
 
 
 <a name="contributors"></a>
-### Contributors 
+## Contributors 
 ${contributors}
 
 <a name="tests"></a>
-### Tests 
+## Tests 
 ${testInstructions}
 
 <a name="questions"></a>
-#### Questions
+### Questions
 
 If you have any questions, visit my [GitHub profile](https://www.github.com/${gitHub}) or email me: ${email} 
 
