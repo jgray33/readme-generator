@@ -23,6 +23,8 @@ A program that generates a quality readme file using Node and inquirer package. 
 Clone this github repository and open the file. Ensuring you are in the correct file in the terminal, enter "npm install inquirer". Once it has installed, enter "node index.js" into the terminal
 
 
+Watch this [video](https://youtu.be/xIgeqzaKdks) to demonstrate how to use this application.
+
 <a name="usage"></a>
 ## Usage 
 Use this on all of your github repositories. A high quality readme is important for all projects. This program ensures all key information is included.
