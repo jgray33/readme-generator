@@ -120,7 +120,7 @@ inquirer. prompt([
      .then((answers) => {
       console.log(answers)
       let readMePageContent = generateReadme(answers)
-      fs.writeFile("README6.md", readMePageContent, (err) =>
+      fs.writeFile("README1.md", readMePageContent, (err) =>
         err ? console.log(err) : console.log("Read me generated"))
      })
  
@@ -170,27 +170,5 @@ switch(license) {
 }
 } 
 
-// function renderLicenseSection(license) {
-
-// }
-
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-//
-
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-// function renderLicenseSection(license) {}
-
-// // TODO: Create a 
-// function generateMarkdown(data) {
-//   return `# ${data.title}
-
-// `;
-// }
 
 // module.exports = generateMarkdown;
-// module.exports 
