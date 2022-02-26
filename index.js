@@ -120,7 +120,7 @@ inquirer. prompt([
      .then((answers) => {
       console.log(answers)
       let readMePageContent = generateReadme(answers)
-      fs.writeFile("README1.md", readMePageContent, (err) =>
+      fs.writeFile("README.md", readMePageContent, (err) =>
         err ? console.log(err) : console.log("Read me generated"))
      })
  
